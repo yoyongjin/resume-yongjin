@@ -43,3 +43,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
   ServerStyleSheet => useState로 한 번 생성해서 재사용하는 방식
   useServerInsertedHTML => 서버에서 생성된 동적 스타일을 Next.js의 HTML에 삽입
   StyleSheetManager => 서버와 클라이언트의 스타일 일관성 유지
+
+- [GlobalStyle 설정]
+  tailwindCSS가 Normalize.css 를 기반으로 기본 스타일을 설정하는것을 참고해 같은 기반으로 styled-components의 createGlobalStyle을 이용해 전역 스타일링
+  <StyledComponentsRegistry> 하위에 <GlobalStyle /> 렌더링
+  'use client'를 사용한 컴포넌트는 서버에서 렌더링되지 않고, 클라이언트 측에서 동작한다. 하지만! 서버 컴포넌트 내부에서 호출되면 SSR 환경에서도 사용할 수 있다!
+
+## 컨벤션
+
+- 테마, 재사용 컴포넌트, 전역 스타일 => styled-components
+- container/wrapper 컴포넌트 스타일 => tailwindcss
