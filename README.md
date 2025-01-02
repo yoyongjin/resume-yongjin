@@ -48,8 +48,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
   tailwindCSS가 Normalize.css 를 기반으로 기본 스타일을 설정하는것을 참고해 같은 기반으로 styled-components의 createGlobalStyle을 이용해 전역 스타일링
   <StyledComponentsRegistry> 하위에 <GlobalStyle /> 렌더링
   'use client'를 사용한 컴포넌트는 서버에서 렌더링되지 않고, 클라이언트 측에서 동작한다. 하지만! 서버 컴포넌트 내부에서 호출되면 SSR 환경에서도 사용할 수 있다!
+  폰트는 PretendardVariable.woff2 사용=> next/font/local로 최적화
 
 ## 컨벤션
 
-- 테마, 재사용 컴포넌트, 전역 스타일 => styled-components
-- container/wrapper 컴포넌트 스타일 => tailwindcss
+- 테마, 재사용 컴포넌트 => styled-components
+- container/wrapper 컴포넌트 스타일, 폰트, 전역 스타일 => tailwindcss
