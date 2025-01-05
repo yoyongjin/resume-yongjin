@@ -1,11 +1,10 @@
-import { pretendard } from '@/assets/fonts';
-import StyledComponentsRegistry from '@/lib/styled-registry';
-import type { Metadata } from 'next';
-import './globals.css';
+import { pretendard } from "@/assets/fonts";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: '프론트엔드 개발자 김용진',
-  description: '프론트엔드 개발자 김용진 이력서입니다.',
+  title: "프론트엔드 개발자 김용진",
+  description: "프론트엔드 개발자 김용진 이력서입니다.",
 };
 
 export default function RootLayout({
@@ -15,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${pretendard.variable} font-pretendard`}>
-      <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
