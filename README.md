@@ -54,3 +54,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - 테마, 재사용 컴포넌트 => styled-components
 - container/wrapper 컴포넌트 스타일, 폰트, 전역 스타일 => tailwindcss
+
+
+[2025-01-06]
+- 서버컴포넌트 사용을 위해 styled-components 제거하기로 함
+- 일단 tailwind로만 하고 나중에 vanilla-extract로 부분 리팩토링 하기
